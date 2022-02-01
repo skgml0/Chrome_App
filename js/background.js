@@ -4,4 +4,3 @@ const bgImage = document.createElement("img");
 bgImage.src = `img/${chosenImg}`;
 // document.body.appendChild(bgImage);
 document.body.prepend(bgImage);
-console.log(bgImage);
