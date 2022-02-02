@@ -1,0 +1,26 @@
+* {
+  font-family: "Nanum Myeongjo", serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+input {
+  border: none;
+  outline: none;
+  /* background: transparent; */
+}
