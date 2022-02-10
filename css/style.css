@@ -6,16 +6,20 @@ body {
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
+  font-size: 10px;
+  overflow: hidden;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  top: 0;
+  top: -1rem;
   width: 100vw;
-  height: 60px;
+  height: 2rem;
   padding: 30px;
+  font-size: 1rem;
+  color: #fff;
 }
 
 main {
@@ -23,15 +27,19 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   margin-top: 100px;
 }
 
 #clock {
-  font-size: 100px;
+  font-size: 5rem;
   text-shadow: 2px 3px 3px rgb(7, 7, 7);
-  color: rgb(120, 230, 147);
+  color: rgb(226, 243, 231);
 }
-
+#day {
+  font-size: 1.3rem;
+  color: #fff;
+}
 #todo-form {
   display: flex;
   flex-direction: column;
@@ -43,14 +51,14 @@ main {
   width: 200px;
   height: 30px;
   margin: 10px 0;
+  border-radius: 10px;
 }
 .todo-wrap {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  padding: 20px;
-  background-color: rgb(239, 248, 248);
+  width: 200px;
+  background-color: #fdf8ba;
 }
 
 #todo-list {
@@ -58,39 +66,146 @@ main {
   flex-direction: column;
   align-items: flex-start;
   list-style: decimal-leading-zero;
+  margin-top: 5px;
   margin-left: 15px;
-  /* border: 3px dashed black; */
 }
 #todo-list li {
-  margin-bottom: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 6px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+#todo-list li span {
+  vertical-align: -5px;
+}
+#todo-list li button {
+  display: block;
 }
 #coffee {
+  width: 90px;
   position: absolute;
-  left: 10px;
-  bottom: 120px;
-  /* margin: 300px 0; */
+  bottom: 5rem;
+  width: 100%;
+}
+.cup {
+  background-color: #fff;
+  height: 80px;
+  width: 80px;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: inset -3px -2px 3px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 0 auto;
+}
+.cup .handle {
+  position: absolute;
+  height: 50px;
+  width: 40px;
+  background: transparent;
+  border-radius: 20px;
+  margin: 6px 0 0 60px;
+  z-index: -1;
+  box-shadow: inset 0px 1px 2px 7px #ddd;
+}
+
+.cup .smoke {
+  position: absolute;
+  box-shadow: 1px 1px 12px 12px rgba(255, 255, 255, 0.3);
+  margin: -35px 20px;
+  height: 0px;
+  width: 0px;
+  padding: 20px 20px;
+  background: rgba(255, 255, 255, 0.3);
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation: wind 6000ms infinite;
+  -ms-transform: skewY(0deg); /* IE 9 */
+  -webkit-transform: skewY(0deg); /* Safari */
+  transform: skewY(0deg);
+  z-index: -1;
+}
+.plate {
+  margin: 0px;
+}
+.plate-sup {
+  content: "";
+  width: 130px;
+  height: 10px;
+  background: #fff;
+  border-radius: 0 0 1rem 1rem;
+  margin: 0 auto;
+}
+
+.plate-inf {
+  content: "";
+  width: 80px;
+  height: 5px;
+  background: #ddd;
+  border-radius: 0 0 1rem 1rem;
+  margin: 0 auto;
+}
+.plate .shadow {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 120px;
+  height: 5px;
+  margin: -1px auto;
+  border-radius: 50%;
+}
+
+.footer {
+  width: 100%;
+}
+.footer .coffee-title {
+  margin-top: 5px;
+}
+.footer p {
+  font-size: 18px;
   color: #fff;
-  background: radial-gradient(#a696c4, #f3eebd);
-  opacity: 0.7;
-  border-radius: 10%;
-  text-shadow: 1px 2px 2px #000;
-  /* background: linear-gradient(lightCyan, skyBlue, deepSkyBlue); */
+  font-weight: 400;
   text-align: center;
 }
-#coffee .coffee-wrap {
-  margin: 10px 0;
-  width: 400px;
+.footer a {
+  color: #ddd;
 }
-.coffee-title {
-  font-size: 30px;
-  margin-bottom: 3px;
+
+@keyframes wind {
+  0% {
+    padding: 0px 20px;
+    opacity: 0;
+    margin-top: 20px;
+  }
+  40% {
+    padding: 30px 20px;
+    opacity: 1;
+  }
+  60% {
+    padding: 10px 20px;
+  }
+  80% {
+    padding: 1px 20px;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    padding: 0px 20px;
+    opacity: 0;
+  }
 }
 
 #quote {
   position: fixed;
-  bottom: 10px;
-  left: 5px;
-  font-size: 25px;
+  bottom: 20px;
+  font-size: 0.8rem;
   color: #fff;
-  text-shadow: #fc0 1px 0 10px;
+  margin: 1rem 2rem;
+  text-align: center;
+  text-shadow: rgb(253, 253, 253) 1px 0 10px;
+  overflow: hidden;
+}
+#quote span {
+  display: block;
 }
