@@ -9,7 +9,5 @@ function displayData(data) {
   const todayCoffee = data[Math.floor(Math.random() * data.length)];
   console.log(todayCoffee);
   coffeeTitle = document.querySelector(".coffee-title");
-  coffeeDescription = document.querySelector(".coffee-description");
-  coffeeTitle.innerText += " "+todayCoffee["title"];
-  coffeeDescription.innerText = todayCoffee["description"];
+  coffeeTitle.innerText += " " + todayCoffee["title"];
 }
