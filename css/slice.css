@@ -1,0 +1,49 @@
+.slide-wrap {
+  position: absolute;
+  top: 10%;
+  width: 100px;
+  height: 200px;
+  margin: 500px 0 0 0;
+  border: rgb(255, 14, 135) 3px dotted;
+}
+
+.slide-item {
+  background-color: rgb(255, 215, 187);
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: larger;
+  border: rgb(165, 165, 165) 0.5px solid;
+}
+
+.slide-list {
+  width: 900px;
+  display: flex;
+  height: 100px;
+  overflow: hidden;
+}
+.first {
+  background-color: red;
+}
+.second {
+  background-color: yellow;
+}
+.thrid {
+  background-color: green;
+}
+.last {
+  background-color: black;
+}
+.slide-btn {
+  background-color: aquamarine;
+}
+.slide-wrap .slide-btns {
+  display: flex;
+  position: absolute;
+  top: 46px;
+  left: 25%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: aquamarine;
+}
