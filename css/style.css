@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
 body {
   display: flex;
   justify-content: center;
@@ -21,7 +23,23 @@ header {
   font-size: 1rem;
   color: #fff;
 }
+.name-input {
+  padding: 5px;
+  border-radius: 10px;
+}
 
+.name-btn {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-family: "paybooc-Light", sans-serif;
+  font-weight: 600;
+}
+.name-btn:hover {
+  color: #1e6b7b;
+  background: aliceblue;
+}
 main {
   display: flex;
   flex-direction: column;
