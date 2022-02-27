@@ -1,6 +1,7 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
+const toDoWrap = document.querySelector(".todo-wrap");
 const TODOS_KEY = "todos";
 let toDos = [];
 // toDos array를 localStorage에 저장
@@ -49,4 +50,6 @@ if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
+} else {
+  toDoWrap.classList.remove("todo-wrap");
 }
