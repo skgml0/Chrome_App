@@ -1,5 +1,5 @@
 # Chrome_App
-vanilla js로 만든 오늘을 기록하는 웹사이트
+vanilla js로 만든 오늘을 기록하는 웹사이트로, 넣고 싶은 기능들로 천천히 채워넣고 있는 페이지입니다. 
 
 # 링크
 https://skgml0.github.io/Chrome_App/
